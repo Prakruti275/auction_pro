@@ -1,0 +1,8 @@
+<h1>{{ item.title }}</h1>
+<p>{{ item.description }}</p>
+<p>Current Bid: ₹{{ item.current_bid }}</p>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Place Bid</button>
+</form>

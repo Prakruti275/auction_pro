@@ -1,0 +1,10 @@
+<h1>All Auction Items</h1>
+<ul>
+  {% for item in items %}
+    <li>
+      <a href="{% url 'place_bid' item.id %}">{{ item.title }}</a> - ₹{{ item.current_bid }}
+    </li>
+  {% empty %}
+    <li>No items yet.</li>
+  {% endfor %}
+</ul>
